@@ -8,12 +8,12 @@ assignees: ['sadorowo']
 
 🇵🇱 **Repozytoria, których dotyczy błąd**
 🇬🇧 **Repository affected by this error**
-[ ] sadorowo/nixos
-[ ] sadorowo/nix-packages
-[ ] sadorowo/nix-private-packages
-[ ] sadorowo/sador.me
-[ ] sadorowo/smshell
-[ ] sadorowo/wallpapers
+- [ ] sadorowo/nixos
+- [ ] sadorowo/nix-packages
+- [ ] sadorowo/nix-private-packages
+- [ ] sadorowo/sador.me
+- [ ] sadorowo/smshell
+- [ ] sadorowo/wallpapers
 
 🇵🇱 **Opis błędu**
 🇬🇧 **Issue description**
