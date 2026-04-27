@@ -1,6 +1,6 @@
 ---
-name: "Zgłoś błąd/Report a bug"
-about: Zgłoś błąd, aby pomóc nam go naprawić
+name: Zgłoś błąd
+about: Report a bug
 title: "[bug] krótki opis błędu/short issue description"
 labels: ['bug']
 assignees: ['sadorowo']
