@@ -1,0 +1,45 @@
+name: Add labels based on issue template
+
+on:
+  issues:
+    types: [opened, edited]
+
+permissions:
+  issues: write
+
+jobs:
+  label-from-template:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Apply labels based on checkboxes
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const body = context.payload.issue.body || "";
+
+            const repoMap = {
+              "sadorowo/nixos": "sadorowo/nixos",
+              "sadorowo/nix-packages": "sadorowo/nix-packages",
+              "sadorowo/nix-private-packages": "sadorowo/nix-private-packages",
+              "sadorowo/sador.me": "sadorowo/sador.me",
+              "sadorowo/smshell": "sadorowo/smshell",
+              "sadorowo/wallpapers": "sadorowo/wallpapers",
+            };
+
+            const labelsToAdd = [];
+
+            for (const [key, label] of Object.entries(repoMap)) {
+              const regex = new RegExp(`\\[x\\]\\s*${key}`, "i");
+              if (regex.test(body)) {
+                labelsToAdd.push(label);
+              }
+            }
+
+            if (labelsToAdd.length === 0) return;
+            await github.rest.issues.addLabels({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              labels: labelsToAdd
+            });
