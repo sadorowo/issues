@@ -8,12 +8,12 @@ assignees: ['sadorowo']
 
 🇵🇱 **Repozytoria, których dotyczy propozycja**
 🇬🇧 **Repositories linked to this proposal**
-[ ] sadorowo/nixos
-[ ] sadorowo/nix-packages
-[ ] sadorowo/nix-private-packages
-[ ] sadorowo/sador.me
-[ ] sadorowo/smshell
-[ ] sadorowo/wallpapers
+- [ ] sadorowo/nixos
+- [ ] sadorowo/nix-packages
+- [ ] sadorowo/nix-private-packages
+- [ ] sadorowo/sador.me
+- [ ] sadorowo/smshell
+- [ ] sadorowo/wallpapers
 
 🇵🇱 **Propozycja**
 🇬🇧 **Feature request**
